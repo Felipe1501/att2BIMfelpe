@@ -1,15 +1,15 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Contas(props){
-    let texto =[];
-    for(let x = 0; x <= 5; x++){
+/* export default function Contas(props){
+   let texto =[];
+    for(let x = 0; x <= 10; x++){
         texto.push(
             <Text style={styles.texto}>
-                             </Text>
+                {props.qt} x {x} = {x * props.qt}</Text>
         );
+        
     }
-
     return(
         <>
             <View>
@@ -17,7 +17,7 @@ export default function Contas(props){
             </View>
         </>
     );
-}
+}*/
 
 const styles = StyleSheet.create({
     texto:{

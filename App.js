@@ -1,11 +1,11 @@
 import {React, useState} from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput } from 'react-native';
-import { Button } from 'react-native-web';
-import Componente from './Componentes/Componente';
 import Contas from './Componentes/Contas';
 
 export default function App() {
   const [qt, setQt] = useState(0);
+
+
   return (
     <View style={styles.container}>
       <Text style={styles.texto}>FESTA INFANTIL BEN 10</Text>
@@ -24,7 +24,7 @@ export default function App() {
             placeholder='PESSOAS'
             />
       </View>
-        <Contas qt={qt} />
+      <Contas qt={qt}/>
     </View>
 
   );
