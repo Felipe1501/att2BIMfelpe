@@ -4,7 +4,9 @@ import Contas from './Componentes/Contas';
 
 export default function App() {
   const [qt, setQt] = useState(0);
-
+  function trocarCor(){
+    texto = style=(styles.texto).opacity="1"
+}
 
   return (
     <View style={styles.container}>
@@ -20,11 +22,13 @@ export default function App() {
             <TextInput
             style={styles.input}
             value={qt}
-            onChangeText={(value)=>setQt(value)}
+            onChangeText={(texto)=>setQt(texto)}
             placeholder='PESSOAS'
             />
       </View>
-      <Contas qt={qt}/>
+      <View>
+      <Contas qt={qt} />
+        </View> 
     </View>
 
   );
@@ -33,15 +37,16 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#CAF2FC',
+    backgroundColor: '#E0EB98',
     alignItems: 'center',
     justifyContent: 'center',
   },
 
   texto:{
-    color: '#3EE63F',
+    color: '#05139E',
     fontSize: 20,
-    textAlign: 'center'
+    textAlign: 'center',
+
   },
 
   imgg:{
@@ -57,7 +62,7 @@ const styles = StyleSheet.create({
     marginLeft: '10%',
     fontSize: 20,
     borderRadius: 10,
-    borderColor: '#25E629',
+    borderColor: '#05139E',
     textAlign: 'center'
   },
 
@@ -65,4 +70,5 @@ const styles = StyleSheet.create({
     width: '100%',
     marginTop: 5
   }
+
 });
