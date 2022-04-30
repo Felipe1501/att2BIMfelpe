@@ -1,22 +1,21 @@
 import React from "react";
 import { StyleSheet, Text } from "react-native";
 
-
-export default function ContasRefri(props){
+export default function ContasBolo(props){
     let texto = [];
-    let Refri = (props.qt * 600);
+    let Bolo = (props.qt * 250);
     if(props.qt >= 1){
-        if(Refri >= 1000){
+        if(Bolo >= 1000){
             texto.push(
                 <Text style={styles.texto}>
-                    REFRIGERANTE: {Refri/1000} LITROS
+                    BOLO: {Bolo/1000} KG
                 </Text>
-             );
+            );
         }
         else{
             texto.push(
                 <Text style={styles.texto}>
-                    REFRIGERANTE: {Refri} ML
+                    BOLO: {Bolo} G
                 </Text>
             );
         }
@@ -29,14 +28,12 @@ export default function ContasRefri(props){
     );
 }
 
-
 const styles = StyleSheet.create({
     texto:{
 
         opacity: 1,
         fontSize: 20,
         color: '#05139E',
-        marginTop: '4%',
         marginLeft: '2%'
     }
 })

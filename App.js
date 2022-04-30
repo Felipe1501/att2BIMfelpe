@@ -1,12 +1,13 @@
 import {React, useState} from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput } from 'react-native';
-import Contas from './Componentes/Contas';
+import ContasRefri from './Componentes/Contas';
+import ContasAgua from './Componentes/Contas2';
+import ContasBolo from './Componentes/Contas3';
+import ContasDoce from './Componentes/Contas4';
+import ContasSalgado from './Componentes/Contas5';
 
 export default function App() {
-  const [qt, setQt] = useState(0);
-  function trocarCor(){
-    texto = style=(styles.texto).opacity="1"
-}
+  const [qt, setQt] = useState();
 
   return (
     <View style={styles.container}>
@@ -27,7 +28,13 @@ export default function App() {
             />
       </View>
       <View>
-      <Contas qt={qt} />
+      <Text style={styles.contas}> QUANTIDADE DE PESSOAS: {qt} <br></br>
+      <ContasRefri qt={qt} /> <br></br>
+      <ContasAgua qt={qt} /> <br></br>
+      <ContasBolo qt={qt} /> <br></br>
+      <ContasDoce qt={qt} /> <br></br>
+      <ContasSalgado qt={qt} />
+      </Text>
         </View> 
     </View>
 
@@ -45,8 +52,15 @@ const styles = StyleSheet.create({
   texto:{
     color: '#05139E',
     fontSize: 20,
+    marginTop: '2%',
     textAlign: 'center',
 
+  },
+
+  contas:{
+    color: '#05139E',
+    fontSize: 20,
+    marginTop: '4%',
   },
 
   imgg:{
@@ -63,6 +77,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     borderRadius: 10,
     borderColor: '#05139E',
+    marginTop: '4%',
     textAlign: 'center'
   },
 
