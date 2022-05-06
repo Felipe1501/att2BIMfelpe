@@ -22,7 +22,7 @@ export default function App() {
   return (
     
     <View style={styles.container}>
-      <Text style={styles.comeco}>FELIPE BARBOSA</Text>
+
       <Text style={styles.texto}>FESTA INFANTIL BEN 10</Text>
       <Image
       style={styles.imgg}
@@ -37,6 +37,7 @@ export default function App() {
             value={valor}
             onChangeText={(texto)=>setValor(texto)}
             placeholder='PESSOAS'
+            keyboardType='numeric'
             />
       </View>
       <View style={styles.botao}>
@@ -53,13 +54,12 @@ export default function App() {
           <Text style={styles.textobtn}>LIMPAR</Text>
         </TouchableOpacity>
       </View>
-      <Text style={styles.contas}> QUANTIDADE DE PESSOAS: {qt} <br></br>
-    <ContasRefri qt={qt} /> <br></br>
-    <ContasAgua qt={qt} /> <br></br>
-    <ContasBolo qt={qt} /> <br></br>
-    <ContasDoce qt={qt} /> <br></br>
-    <ContasSalgado qt={qt} />
-    </Text>
+      <Text style={styles.contas}> QUANTIDADE DE PESSOAS: {qt} </Text>
+      <Text style={styles.contas}><ContasRefri qt={qt} /> </Text>
+     <Text style={styles.contas}><ContasAgua qt={qt} /> </Text> 
+     <Text style={styles.contas}> <ContasBolo qt={qt} /> </Text>
+    <Text style={styles.contas}> <ContasDoce qt={qt} /></Text> 
+    <Text style={styles.contas}> <ContasSalgado qt={qt} /></Text>
 
     </View>
 
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     borderColor: '#1D1AF5',
     borderRadius: 20,
     width: '80%',
-    height: '120%',
+    height: 40,
     textAlign: 'center',
   },
 
@@ -118,6 +118,7 @@ const styles = StyleSheet.create({
     color: '#05139E',
     fontSize: 20,
     marginTop: '4%',
+
   },
 
   imgg:{
